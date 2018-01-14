@@ -3,7 +3,7 @@
     <div id="error_explanation">
       <h2><%= @contact.errors.count %>件のエラーがあります</h2>
       <ul>
-        <%= @contact.errors.full_messages.each do |msg| %>
+        <% @contact.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
