@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  # get 'contacts/new'
+  root to: 'blogs#index'
   resources :contacts
+  resources :blogs
 end
