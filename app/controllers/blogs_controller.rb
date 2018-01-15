@@ -1,7 +1,11 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   def new
-    @blog = Blog.new
+    if params[:back]
+      @blog = Blog.new(blog_params)
+    else
+      @blog = Blog.new
+    end
   end
   
   def create
@@ -26,6 +30,11 @@ class BlogsController < ApplicationController
   end
 
   def edit
+  end
+  
+  def confirm
+    @blog = Blog.new(blog_params)
+    render 'new' if @blog.invalid?
   end
   
   def update
