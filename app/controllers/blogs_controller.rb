@@ -18,6 +18,8 @@ class BlogsController < ApplicationController
   end
 
   def destroy
+    @blog.destroy
+    redirect_to root_path, notice: "ブログを削除しました"
   end
   
   def show
@@ -27,6 +29,11 @@ class BlogsController < ApplicationController
   end
   
   def update
+    if @blog.update(blog_params)
+      redirect_to root_path, notice: "ブログを編集しました"
+    else
+      render 'edit'
+    end
   end
   
   private
