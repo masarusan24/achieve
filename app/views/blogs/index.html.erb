@@ -1,7 +1,8 @@
-<h1>ブログ一覧</h1>
-
+<h1 class="title">ブログ一覧</h1>
 <div class="container">
-  <%= notice %>
+  <% unless notice.blank? %>
+    <div class="alert alert-info"><%= notice %></div>
+  <% end %>
   <div class="row">
     <% @blogs.each do |blog| %>
       <div class="col-xs-12 col-md-6 blog-panel">

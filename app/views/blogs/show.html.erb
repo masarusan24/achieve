@@ -1,5 +1,7 @@
-<%= render 'layouts/header' %>
-<h1>Blogs#show</h1>
-<p>タイトル:<%= @blog.title %></p>
-<p>内容:<%= @blog.content %></p>
-<%= link_to 'ブログ一覧へ戻る', root_path %>
+<h1 class="title">ブログ詳細</h1>
+<div class="container">
+  <h2>タイトル</h2>
+  <p><%= @blog.title %></p>
+  <h2>内容</h2>
+  <p><%= @blog.content %></p>
+</div>

@@ -14,3 +14,38 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   margin-top: 50px;
+   margin-bottom: 80px;
+ }
+
+ h1.title {
+   text-align: center;
+   margin: 5% 30px;
+ }
+
+ .about {
+   margin-left: 20px;
+   margin-right: 20px;
+ }
+
+ .preamble {
+   margin-left: 20px;
+   margin-right: 20px;
+ }
+
+ .preamble h1 {
+   border-bottom:solid 3px;
+   border-bottom-color: #2c4f54;
+ }
+
+ .about h2 {
+   border-bottom:solid 3px;
+   border-bottom-color: #2c4f54;
+   border-bottom-width: thin;
+ }
+
+ .btn {
+   margin: 10px 0;
+ }
