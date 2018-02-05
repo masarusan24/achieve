@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_param)
     if @user.save
-      redirect_to user_path(@user.id), notice: "ユーザを作成しました"
+      flash[:success] = 'ユーザを作成しました'
+      redirect_to user_path(@user.id)
     else
       render 'new'
     end

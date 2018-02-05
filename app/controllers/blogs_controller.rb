@@ -11,7 +11,8 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      redirect_to blogs_path, notice: "ブログを作成しました！"
+      flash[:success] = 'ブログを作成しました！'
+      redirect_to blogs_path
     else
       render 'new'
     end
@@ -23,7 +24,8 @@ class BlogsController < ApplicationController
 
   def destroy
     @blog.destroy
-    redirect_to blogs_path, notice: "ブログを削除しました"
+    flash[:danger] = 'ブログを削除しました'
+    redirect_to blogs_path
   end
 
   def show
@@ -39,7 +41,8 @@ class BlogsController < ApplicationController
 
   def update
     if @blog.update(blog_params)
-      redirect_to blogs_path, notice: "ブログを編集しました"
+      flash[:info] = 'ブログを編集しました'
+      redirect_to blogs_path
     else
       render 'edit'
     end

@@ -9,9 +9,11 @@
   </head>
     <%= render 'layouts/header' %>
   <body>
-    <% flash.each do |key,value| %>
-      <%= content_tag(:div, value, class: "alert alert-#{key} alert-dismissible") %>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <% flash.each do |msg_type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{msg_type} alert-dismissible") %>
+      <!-- <%= content_tag(:div, message, class: "alert alert-#{msg_type} alert-dismissible") do %>
+      <%= content_tag(:button, 'x', class: "close", data: { dismiss: 'alert' }) %>
+      <% end %> -->
     <% end %>
     <%= yield %>
   </body>
