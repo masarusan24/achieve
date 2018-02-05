@@ -1,0 +1,28 @@
+<div class="container">
+<% unless notice.blank? %>
+  <div class="alert alert-info alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= notice %>
+  </div>
+<% end %>
+<%= form_with(scope: :session, local: true, url: sessions_path) do |form| %>
+
+  <div class="user_name">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "name" %>
+  </div>
+  <div class="user_email">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "email@email.com" %>
+  </div>
+  <div class="user_password">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "form-control", placeholder: "password" %>
+  </div>
+  <div class="user_password">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password_confirmation" %>
+  </div>
+  <%= form.submit "ログインする", class: "btn btn-default" %>
+<% end %>
+</div>
