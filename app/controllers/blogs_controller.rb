@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_to_login, only: [:new, :show, :edit, :destroy]
   def new
     if params[:back]
       @blog = Blog.new(blog_params)
@@ -55,5 +56,12 @@ class BlogsController < ApplicationController
 
   def set_blog
     @blog = Blog.find(params[:id])
+  end
+
+  def redirect_to_login
+    unless logged_in?
+      flash[:warning] = 'ログインしてください'
+      redirect_to new_session_path
+    end
   end
 end
