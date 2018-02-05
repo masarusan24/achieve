@@ -9,12 +9,7 @@
   </head>
     <%= render 'layouts/header' %>
   <body>
-    <% flash.each do |msg_type, message| %>
-      <%= content_tag(:div, message, class: "alert alert-#{msg_type} alert-dismissible") %>
-      <!-- <%= content_tag(:div, message, class: "alert alert-#{msg_type} alert-dismissible") do %>
-      <%= content_tag(:button, 'x', class: "close", data: { dismiss: 'alert' }) %>
-      <% end %> -->
-    <% end %>
+    <%= render 'layouts/flash' %>
     <%= yield %>
   </body>
     <%= render 'layouts/footer' %>

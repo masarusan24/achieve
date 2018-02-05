@@ -1,10 +1,4 @@
 <div class="container">
-<% unless notice.blank? %>
-  <div class="alert alert-info alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= notice %>
-  </div>
-<% end %>
 <%= form_with(scope: :session, local: true, url: sessions_path) do |form| %>
 
   <div class="user_name">

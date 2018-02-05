@@ -1,11 +1,5 @@
 <h1 class="title">ブログ一覧</h1>
 <div class="container">
-  <% unless notice.blank? %>
-    <div class="alert alert-info alert-dismissible">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <%= notice %>
-    </div>
-  <% end %>
   <div class="row">
     <% @blogs.each do |blog| %>
       <div class="col-xs-12 col-md-6 blog-panel">
