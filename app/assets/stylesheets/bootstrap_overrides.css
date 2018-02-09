@@ -1,1 +1,11 @@
+.glyphicon.glyphicon-star {
+  text-decoration: none;
+  color: #f23f1f;
+  font-size: 3rem;
+}
 
+.glyphicon.glyphicon-star-empty {
+  text-decoration: none;
+  color: #f23f1f;
+  font-size: 3rem;
+}
