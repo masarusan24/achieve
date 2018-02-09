@@ -7,6 +7,8 @@
       <%= link_to 'お気に入り登録する', favorites_path(blog_id: @blog.id), method: :post, class: 'btn btn-primary' %>
     <% end %>
   <% end %>
+  <h2>投稿者</h2>
+  <p><%= @blog.user.name %></p>
   <h2>タイトル</h2>
   <p><%= @blog.title %></p>
   <h2>内容</h2>

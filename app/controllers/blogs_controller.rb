@@ -6,7 +6,6 @@ class BlogsController < ApplicationController
       @blog = Blog.new(blog_params)
     else
       @blog = Blog.new
-      @blog.user_id = current_user.id
     end
   end
 
