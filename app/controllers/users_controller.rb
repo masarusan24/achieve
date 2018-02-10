@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(name: params[:name])
+    @favorite_blogs = @user.favorite_blogs
   end
 
   def index
