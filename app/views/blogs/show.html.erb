@@ -2,9 +2,13 @@
 <div class="container">
   <% unless @blog.user == current_user %>
     <% if @favorite.present? %>
-      <%= link_to '', favorite_path(blog_id: @blog.id), method: :delete, class: 'glyphicon glyphicon-star' %>
+      <%= link_to favorite_path(blog_id: @blog.id), method: :delete do %>
+        <i class="fa fa-star fa-2x"></i>
+      <% end %>
     <% else %>
-      <%= link_to '', favorites_path(blog_id: @blog.id), method: :post, class: 'glyphicon glyphicon-star-empty' %>
+      <%= link_to favorites_path(blog_id: @blog.id), method: :post do %>
+        <i class="fa fa-star faa-flash animated fa-2x"></i>
+      <% end %>
     <% end %>
   <% end %>
   <h2>投稿者</h2>
