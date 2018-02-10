@@ -35,6 +35,7 @@ class BlogsController < ApplicationController
   end
 
   def edit
+    redirect_to blogs_path unless @blog.user_id == current_user.id
   end
 
   def confirm
