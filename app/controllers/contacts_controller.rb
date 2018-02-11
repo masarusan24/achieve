@@ -6,6 +6,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
+      ContactMailer::contact_mail(@contact).deliver
       flash[:info] = 'お問い合わせを受け付けました。'
       redirect_to new_contact_path
     else
