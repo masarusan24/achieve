@@ -3,15 +3,14 @@ class BlogsController < ApplicationController
   before_action :redirect_to_login, only: [:new, :show, :edit, :destroy]
   def new
     if params[:back]
-      @blog = Blog.new(blog_params)
+      @blog = current_user.blogs.build(blog_params)
     else
-      @blog = Blog.new
+      @blog = current_user.blogs.build
     end
   end
 
   def create
-    @blog = Blog.new(blog_params)
-    @blog.user_id = current_user.id
+    @blog = current_user.blogs.build(blog_params)
     if @blog.save
       ContactMailer::create_blog_mail(@blog).deliver
       flash[:success] = 'ブログを作成しました！'
@@ -40,7 +39,7 @@ class BlogsController < ApplicationController
   end
 
   def confirm
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.new(blog_params)
     render 'new' if @blog.invalid?
   end
 
