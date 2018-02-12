@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       flash[:success] = 'ユーザを作成しました'
       redirect_to user_path(@user.name)
     else
-      render 'new'
+      render :new
     end
   end
 

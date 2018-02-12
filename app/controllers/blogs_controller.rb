@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
       flash[:success] = 'ブログを作成しました！'
       redirect_to blogs_path
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -40,7 +40,7 @@ class BlogsController < ApplicationController
 
   def confirm
     @blog = current_user.blogs.new(blog_params)
-    render 'new' if @blog.invalid?
+    render :new if @blog.invalid?
   end
 
   def update
@@ -48,7 +48,7 @@ class BlogsController < ApplicationController
       flash[:info] = 'ブログを編集しました'
       redirect_to blogs_path
     else
-      render 'edit'
+      render :edit
     end
   end
 
