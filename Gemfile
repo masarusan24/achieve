@@ -56,6 +56,8 @@ group :development do
   gem 'binding_of_caller'
   # ブラウザでメール送信内容を確認することができるgem
   gem 'letter_opener_web'
+  # シードデータ生成用
+  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
