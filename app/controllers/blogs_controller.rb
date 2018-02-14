@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :redirect_to_login, only: [:new, :show, :edit, :destroy]
+
   def new
     if params[:back]
       @blog = current_user.blogs.build(blog_params)
