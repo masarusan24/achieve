@@ -6,8 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_param)
     if @user.save
-      flash[:success] = 'ユーザを作成しました'
-      redirect_to user_path(@user.name)
+      redirect_to user_path(@user.name), flash: { success: 'ユーザを作成しました' }
     else
       render :new
     end
@@ -25,8 +24,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:name])
     @user.destroy
-    flash[:danger] = 'ユーザを削除しました'
-    redirect_to users_path
+    redirect_to users_path, flash: { danger: 'ユーザを削除しました' }
   end
 
   private
