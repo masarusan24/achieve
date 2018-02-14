@@ -22,7 +22,7 @@ class BlogsController < ApplicationController
   end
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.index
   end
 
   def destroy
