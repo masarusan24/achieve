@@ -144,6 +144,7 @@ ja:
       create: 登録する
       submit: 保存する
       update: 更新する
+      save_session: ログインする
   number:
     currency:
       format:
@@ -202,3 +203,17 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       short: "%y/%m/%d %H:%M"
     pm: 午後
+  log_in: ログインする
+  blog_list: ブログ一覧
+  create_blog: ブログを作成する
+  edit_blog: ブログを編集する
+  blog_detail: ブログ詳細
+  favorite_blogs: お気に入りブログ
+  contact_form: お問い合わせフォーム
+  author: 投稿者
+  created_at: 作成日時
+  detail: 詳細画面へ
+  edit: 編集画面へ
+  delete: 削除する
+  occurred: "%{count}件のエラーが発生しました"
+  mypage: "%{user}のページ"

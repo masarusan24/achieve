@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      blog: "Blog"
+      user: "User"
+    attributes:
+      blog:
+        title: "Title"
+        content: "Content"
+      user:
+        title: "Title"
+        name: "Name"
+        email: "Email"
+        current_password: "current password"
+        password: "password"
+        password_confirmation: "password confirmation"
+        remember_me: "remember me"

@@ -1,4 +1,4 @@
-<h1 class="title">ブログ詳細</h1>
+<h1 class="title"><%=t :blog_detail %></h1>
 <div class="container">
   <% unless @blog.user == current_user %>
     <% if @favorite.present? %>
@@ -11,10 +11,10 @@
       <% end %>
     <% end %>
   <% end %>
-  <h2>投稿者</h2>
+  <h2><%=t :author %></h2>
   <p><%= @blog.user.name %></p>
-  <h2>タイトル</h2>
+  <h2><%=t :title %></h2>
   <p><%= @blog.title %></p>
-  <h2>内容</h2>
+  <h2><%= :content %></h2>
   <p><%= @blog.content %></p>
 </div>
