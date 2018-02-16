@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :redirect_to_login, only: [:new, :show, :edit, :destroy]
+  before_action :redirect_to_blogs_path, only: [:edit, :destroy]
 
   def new
     if params[:back]
@@ -34,7 +35,6 @@ class BlogsController < ApplicationController
   end
 
   def edit
-    redirect_to blogs_path unless @blog.user_id == current_user.id
   end
 
   def confirm
@@ -63,5 +63,9 @@ class BlogsController < ApplicationController
     unless logged_in?
       redirect_to new_session_path, flash: { warning: 'ログインしてください' }
     end
+  end
+
+  def redirect_to_blogs_path
+    redirect_to blogs_path unless @blog.user_id == current_user.id
   end
 end
