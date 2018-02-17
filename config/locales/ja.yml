@@ -213,6 +213,8 @@ ja:
   favorite_blogs: お気に入りブログ
   contact: お問合わせ
   contact_form: お問い合わせフォーム
+  title: タイトル
+  content: 本文
   author: 投稿者
   created_at: 作成日時
   detail: 詳細画面へ
