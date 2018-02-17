@@ -203,12 +203,15 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       short: "%y/%m/%d %H:%M"
     pm: 午後
-  log_in: ログインする
+  log_in: ログイン
+  log_out: ログアウト
+  sign_up: 新規ユーザ登録
   blog_list: ブログ一覧
   create_blog: ブログを作成する
   edit_blog: ブログを編集する
   blog_detail: ブログ詳細
   favorite_blogs: お気に入りブログ
+  contact: お問合わせ
   contact_form: お問い合わせフォーム
   author: 投稿者
   created_at: 作成日時
@@ -216,4 +219,6 @@ ja:
   edit: 編集画面へ
   delete: 削除する
   occurred: "%{count}件のエラーが発生しました"
-  mypage: "%{user}のページ"
+  mypage: "マイページ"
+  users_home: "%{user}のページ"
+  new_post: 新規投稿

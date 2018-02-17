@@ -2,4 +2,4 @@ en:
   author: author
   created_at: created_at
   occurred: "%{count} error occurred"
-  mypage: "%{user}'s page"
+  users_home: "%{user}'s page"
