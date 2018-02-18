@@ -144,7 +144,6 @@ ja:
       create: 登録する
       submit: 保存する
       update: 更新する
-      save_session: ログインする
   number:
     currency:
       format:
@@ -211,7 +210,6 @@ ja:
   create_blog: ブログを作成する
   edit_blog: ブログを編集する
   blog_detail: ブログ詳細
-  favorite_blogs: お気に入りブログ
   contact: お問合わせ
   contact_form: お問い合わせフォーム
   title: タイトル
@@ -223,5 +221,45 @@ ja:
   delete: 削除する
   occurred: "%{count}件のエラーが発生しました"
   mypage: "マイページ"
-  users_home: "%{user}のページ"
   new_post: 新規投稿
+  please_login: ログインしてください
+  confirm_detele: 削除しますか？
+  users:
+    new:
+      title: 新規ユーザ登録
+    edit:
+      title: ユーザ情報を編集する
+    show:
+      title: "%{user}のページ"
+      favorite_blogs: お気に入りブログ
+    index:
+      title: ユーザ一覧
+    create:
+      success: ユーザを作成しました
+    update:
+      success: ユーザ情報を編集しました
+    destroy:
+      success: ユーザを削除しました
+  blogs:
+    new:
+      title: ブログを作成する
+    edit:
+      title: ブログを編集する
+    show:
+       title: ブログ詳細
+    index:
+      title: ブログ一覧
+    confirm:
+      title: 以下の内容で投稿します
+    create:
+      success: ブログを作成しました
+    update:
+      success: ブログを編集しました
+    destroy:
+      success: ブログを削除しました
+  sessions:
+    create:
+      success: ログインしました
+      failed: ログインに失敗しました
+    destroy:
+      success: ログアウトしました

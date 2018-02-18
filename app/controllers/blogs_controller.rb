@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
     @blog.image.retrieve_from_cache! params[:cache][:image]
     if @blog.save
       ContactMailer::create_blog_mail(@blog).deliver
-      redirect_to blogs_path, flash: { success: 'ブログを作成しました！' }
+      redirect_to blogs_path, flash: { success: t('.success') }
     else
       render :new
     end
@@ -28,7 +28,7 @@ class BlogsController < ApplicationController
 
   def destroy
     @blog.destroy
-    redirect_to blogs_path, flash: { danger: 'ブログを削除しました' }
+    redirect_to blogs_path, flash: { danger: t('.success') }
   end
 
   def show
@@ -45,7 +45,7 @@ class BlogsController < ApplicationController
 
   def update
     if @blog.update(blog_params)
-      redirect_to blogs_path, flash: { info: 'ブログを編集しました' }
+      redirect_to blogs_path, flash: { info: t('.success') }
     else
       render :edit
     end
@@ -62,7 +62,7 @@ class BlogsController < ApplicationController
 
   def redirect_to_login
     unless logged_in?
-      redirect_to new_session_path, flash: { warning: 'ログインしてください' }
+      redirect_to new_session_path, flash: { warning: t(:please_login) }
     end
   end
 

@@ -2,4 +2,45 @@ en:
   author: author
   created_at: created_at
   occurred: "%{count} error occurred"
-  users_home: "%{user}'s page"
+  please_login: Please Login
+  confirm_detele: delete it?
+  users:
+    new:
+      title: Sign up
+    edit:
+      title: Edit User Info
+    show:
+      title:  "%{user}'s page"
+      favorite_blogs: Favorite Blogs
+    index:
+      title: User List
+    create:
+      success: Created a User
+    update:
+      success: Edited a User Info
+    destroy:
+      success: Deleted a User
+  blogs:
+    new:
+      title: Create Blog
+    edit:
+      title: Edit Blog
+    show:
+      title: Blog Detail
+      favorite_blogs: Favorite Blogs
+    index:
+      title: Blog List
+    confirm:
+      title: Post with the following content
+    create:
+      success: Created a Blog
+    update:
+      success: Edited a Blog
+    destroy:
+      success: Deleted a Blog
+  sessions:
+    create:
+      success: Session Log in
+      failed: Failed Log in
+    destroy:
+      success: Session Log out

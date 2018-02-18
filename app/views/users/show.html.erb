@@ -1,6 +1,7 @@
-<h1 class="title"><%= image_tag @user.image.thumb %><%=t :users_home, user: @user.name %></h1>
+<!-- <h1 class="title"><%= image_tag @user.image.thumb %><%=t :users_home, user: @user.name %></h1> -->
+<h1 class="title"><%= image_tag @user.image.thumb %><%=t '.title', user: @user.name %></h1>
 <div class="container">
-  <h2><%=t :favorite_blogs %></h2>
+  <h2><%=t '.favorite_blogs' %></h2>
   <div class="row">
     <% @favorite_blogs.each do |blog| %>
       <div class="col-xs-12 col-md-6 blog-panel">
