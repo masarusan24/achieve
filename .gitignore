@@ -20,3 +20,6 @@
 
 # Ignore SendGrid ID,Password
 .env
+
+# Ignore all upload files
+/public/uploads/

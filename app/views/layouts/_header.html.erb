@@ -15,6 +15,7 @@
           <li><%= link_to t(:blog_list), blogs_path %></li>
           <li><%= link_to t(:mypage), user_path(current_user.name) %></li>
           <li><%= link_to t(:new_post), new_blog_path %></li>
+          <li><%= link_to t(:user_list), users_path %></li>
           <li><%= link_to t(:log_out), session_path(current_user), method: "delete" %></li>
         <% else %>
           <li><%= link_to t(:sign_up), new_user_path %></li>
