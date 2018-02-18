@@ -13,6 +13,8 @@ class BlogsController < ApplicationController
 
   def create
     @blog = current_user.blogs.build(blog_params)
+    @blog.image.retrieve_from_cache! params[:cache][:image]
+    # binding.pry
     if @blog.save
       ContactMailer::create_blog_mail(@blog).deliver
       redirect_to blogs_path, flash: { success: 'ブログを作成しました！' }
@@ -52,7 +54,7 @@ class BlogsController < ApplicationController
 
   private
   def blog_params
-    params.require(:blog).permit(:title, :content, :user_id)
+    params.require(:blog).permit(:title, :content, :user_id, :image)
   end
 
   def set_blog

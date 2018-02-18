@@ -10,6 +10,8 @@
       <p><%= @blog.title %></p>
       <h2>内容</h2>
       <p><%= @blog.content %></p>
+      <p><%= image_tag @blog.image.url %></p>
+      <p><%= hidden_field_tag :"cache[image]", @blog.image.cache_name %></p>
     </div>
     <div class="col-xs-12 col-md-2">
       <%= form.submit "投稿する", class: "btn btn-default" %>
