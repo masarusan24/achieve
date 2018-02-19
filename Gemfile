@@ -34,6 +34,8 @@ gem "font-awesome-rails"
 # Image Upload
 gem 'carrierwave'
 gem 'mini_magick'
+# User authorization settin liblary
+gem 'banken'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

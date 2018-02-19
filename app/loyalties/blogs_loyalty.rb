@@ -1,0 +1,2 @@
+class BlogsLoyalty < ApplicationLoyalty
+end
