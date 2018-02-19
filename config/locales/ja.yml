@@ -263,3 +263,8 @@ ja:
       failed: ログインに失敗しました
     destroy:
       success: ログアウトしました
+  banken:
+    default: この操作は許可されていません
+    posts_loyalty:
+      update?: このブログは編集できません
+      create?: ブログを作成できません

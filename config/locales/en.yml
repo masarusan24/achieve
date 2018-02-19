@@ -44,3 +44,8 @@ en:
       failed: Failed Log in
     destroy:
       success: Session Log out
+  banken:
+    default: 'You cannot perform this action.'
+    posts_loyalty:
+      update?: 'You cannot edit this post!'
+      create?: 'You cannot create posts!'
