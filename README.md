@@ -7,7 +7,7 @@ Achieveを作り終えることで、これからの学習に必要な事前知�
 ![achieve 2018-02-21 11-05-16](https://user-images.githubusercontent.com/17737460/36459459-323a6ae0-16f7-11e8-853a-b2736b5c7cc2.png)
 
 ## Description
-Acheveを一言で表すと、練習用のブログ作成アプリです。
+Achieveを一言で表すと、練習用のブログ作成アプリです。
 ブログを投稿する機能をつけることで、Railsの機能の一端を学ぶことができます。
 
 ## Requirement
