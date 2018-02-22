@@ -1,0 +1,15 @@
+.container
+  = form_with(scope: :session, local: true, url: sessions_path) do |form|
+    .user_name
+      = form.label :name
+      = form.text_field :name, class: "form-control", placeholder: "name"
+    .user_email
+      = form.label :email
+      = form.text_field :email, class: "form-control", placeholder: "email@email.com"
+    .user_password
+      = form.label :password
+      = form.password_field :password, class: "form-control", placeholder: "password"
+    .user_password
+      = form.label :password_confirmation
+      = form.password_field :password_confirmation, class: "form-control", placeholder: "password_confirmation"
+    = form.submit t: :log_in, class: "btn btn-default"

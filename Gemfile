@@ -22,6 +22,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 # for user authorization setting
 gem 'banken'
+# for user slim template engine
+gem 'slim'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

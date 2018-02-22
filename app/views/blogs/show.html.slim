@@ -1,0 +1,24 @@
+h1.title
+  =t '.title'
+.container
+  - unless @blog.user == current_user
+    - if @favorite.present?
+      = link_to favorite_path(blog_id: @blog.id), method: :delete do
+        i.fa.fa-star.fa-2x
+    - else
+      = link_to favorites_path(blog_id: @blog.id), method: :post do
+        i.fa.fa-star.faa-flash.animated.fa-2x
+  h2
+    =t :author
+  p
+    = @blog.user.name
+  h2
+    =t :title
+  p
+    = @blog.title
+  h2
+    =t :content
+  p
+    = @blog.content
+  p
+    = image_tag @blog.image

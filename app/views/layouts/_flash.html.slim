@@ -1,0 +1,9 @@
+- flash.each do |msg_type, message|
+  |  <div class="alert alert-
+  = msg_type
+  |  alert-dismissible">
+  button.close[type="button" data-dismiss="alert" aria-label="Close"]
+    span[aria-hidden="true"]
+      | ×
+  = message
+  |  </div>

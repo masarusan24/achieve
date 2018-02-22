@@ -1,0 +1,30 @@
+header.navbar.navbar-inverse.navbar-fixed-top
+  .container-fluid
+    .navbar-header.clearfix
+      button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#gnavi"]
+        span.sr-only
+          | Bootstrap
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to 'Home', root_path, class: "navbar-brand"
+    #gnavi.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        - if logged_in?
+          li
+            = link_to t(:blog_list), blogs_path
+          li
+            = link_to t(:mypage), user_path(current_user.name)
+          li
+            = link_to t(:new_post), new_blog_path
+          li
+            = link_to t(:user_list), users_path
+          li
+            = link_to t(:log_out), session_path(current_user), method: "delete"
+        - else
+          li
+            = link_to t(:sign_up), new_user_path
+          li
+            = link_to t(:log_in), new_session_path
+        li
+          = link_to t(:contact), new_contact_path

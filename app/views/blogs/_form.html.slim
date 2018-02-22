@@ -1,0 +1,21 @@
+.container
+  = form_with(model: @blog, local: true, url: choose_new_or_edit_blog) do |form|
+    - if @blog.errors.any?
+      #error_explanation
+        h2
+          =t :occurred, count: @blog.errors.count
+        ul
+          - @blog.errors.full_messages.each do |msg|
+            li
+              = msg
+    .blog_title
+      = form.label :title
+      = form.text_field :title, class: "form-control", placeholder: "title"
+    .blog_content
+      = form.label :content
+      = form.text_area :content, class: "form-control", placeholder: "content"
+    .blog_image
+      = form.label :image
+      = form.file_field :image, id: :blog_image
+      = form.hidden_field :image_cache
+    = form.submit t: :submit, class: "btn btn-default"

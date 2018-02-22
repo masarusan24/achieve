@@ -1,0 +1,33 @@
+.container
+  - unless notice.blank?
+    .alert.alert-info.alert-dismissible
+      button.close[type="button" data-dismiss="alert" aria-label="Close"]
+        span[aria-hidden="true"]
+          | ×
+      = notice
+  = form_with(model: @user, local: true, url: choose_new_or_edit_user) do |form|
+    - if @user.errors.any?
+      #error_explanation
+        h2
+          =t :occurred, count: @user.errors.count
+        ul
+          - @user.errors.full_messages.each do |msg|
+            li
+              = msg
+    .user_name
+      = form.label :name
+      = form.text_field :name, class: "form-control", placeholder: "name"
+    .user_email
+      = form.label :email
+      = form.text_field :email, class: "form-control", placeholder: "email@email.com"
+    .user_password
+      = form.label :password
+      = form.password_field :password, class: "form-control", placeholder: "password"
+    .user_password
+      = form.label :password_confirmation
+      = form.password_field :password_confirmation, class: "form-control", placeholder: "password_confirmation"
+    .user_image
+      = form.label :image
+      = form.file_field :image, id: :user_image
+      = form.hidden_field :image_cache
+    = form.submit t: :submit, class: "btn btn-default"

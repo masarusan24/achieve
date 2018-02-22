@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title
+      | Achieve
+    = csrf_meta_tags
+    meta[name="viewport" content="width=device-width"]
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all"]
+    = render 'layouts/header'
+  body
+    = render 'layouts/flash'
+    == yield
+    = render 'layouts/footer'

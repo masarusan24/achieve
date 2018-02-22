@@ -1,0 +1,20 @@
+.container
+  = form_with(model: @contact, local: true, url: contacts_path) do |form|
+    - if @contact.errors.any?
+      #error_explanation
+        h2
+          =t 'occurred', count: @contact.errors.count
+        ul
+          - @contact.errors.full_messages.each do |msg|
+            li
+              = msg
+    .contact_name
+      = form.label :name
+      = form.text_field :name, class: "form-control", placeholder: "name"
+    .contact_email
+      = form.label :email
+      = form.text_field :email, class: "form-control", placeholder: "email@email.com"
+    .contact_content
+      = form.label :content
+      = form.text_area :content, class: "form-control", placeholder: "content"
+    = form.submit t: :submit, class: "btn btn-default"
