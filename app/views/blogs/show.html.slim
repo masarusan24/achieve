@@ -22,3 +22,8 @@ h1.title
     = @blog.content
   p
     = image_tag @blog.image
+  h2
+    = t :comment
+  #comments_area
+    = render partial: 'comments/index', locals: { comments: @comments, blog: @blog }
+  = render partial: 'comments/form', locals: { comment: @comment, blog: @blog }

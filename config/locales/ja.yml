@@ -214,6 +214,7 @@ ja:
   contact_form: お問い合わせフォーム
   title: タイトル
   content: 本文
+  comment: コメント
   author: 投稿者
   created_at: 作成日時
   detail: 詳細画面へ
@@ -257,6 +258,9 @@ ja:
       success: ブログを編集しました
     destroy:
       success: ブログを削除しました
+  commetns:
+    create:
+      failed: 投稿できませんでした...
   sessions:
     create:
       success: ログインしました

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#home'
   resources :contacts
   resources :blogs do
+    resources :comments
     collection do
       post :confirm
     end

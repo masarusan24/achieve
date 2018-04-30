@@ -1,0 +1,5 @@
+ul
+  - comments.each do |comment|
+    - unless comment.id.nil?
+      li
+        = comment.content
